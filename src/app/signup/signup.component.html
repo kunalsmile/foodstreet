@@ -1,0 +1,28 @@
+<h2>Register</h2>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="example-container">
+        <mat-form-field>
+            <input matInput placeholder="Enter your name" [formControl]="name" required>
+            <mat-error *ngIf="name.invalid">{{getNameErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter your email" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+                <input matInput placeholder="Enter your mobile" [formControl]="mobile" required>
+                <mat-error *ngIf="mobile.invalid">{{getEmailErrorMessage()}}</mat-error>
+            </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter your password" [formControl]="password" required>
+            <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <div style="width:100%;">
+            <div style="width:50%;float:left;">
+                <button class="btn btn-primary" mat-raised-button>Sign Up</button>
+            </div>
+            <div style="width:50%;float:left;">
+                <button class="btn btn-primary" (click)="goToLogin()" mat-raised-button>Login</button></div>
+            </div>
+    </div>
+</form>

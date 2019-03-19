@@ -1,0 +1,12 @@
+table {
+  width: 100%;
+}
+
+.customWidthClass{
+  flex: 0 0 75px;
+}
+
+.mat-footer-row {
+  color: aquamarine;
+  font: bold
+}

@@ -1,0 +1,28 @@
+<div class="container">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <mat-icon>home</mat-icon>
+      <button mat-button routerLink='/items'>
+        <mat-icon>restaurant_menu</mat-icon>
+      </button>
+      <button mat-button routerLink='/category'>
+        <mat-icon>category</mat-icon>
+      </button>
+      <button mat-button routerLink='/cart'>
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+      <button mat-button routerLink='/signup' name='signup'>
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      <button mat-button>
+        <mat-icon>supervised_user_circle</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div style="height:50px"></div>
+  <div style="width:100%">
+    <div style="width:100%;float:right;">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

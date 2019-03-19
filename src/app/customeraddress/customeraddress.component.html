@@ -1,0 +1,33 @@
+<form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
+    <div class="example-container">
+        <mat-form-field>
+            <input matInput placeholder="Enter your house number" [formControl]="houseNumber" value="{{address.house_number}}" required>
+            <mat-error *ngIf="houseNumber.invalid">{{getHouseNumberErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter your address" [formControl]="address1" required value="{{address.address1}}">
+            <mat-error *ngIf="address1.invalid">{{getAddressErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+                <input matInput placeholder="Enter your address" [formControl]="address2" required value="{{address.address2}}">
+            </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter your building name" [formControl]="buildingName" required value="{{address.building_name}}">
+            <mat-error *ngIf="buildingName.invalid">{{getBuildingNameErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter city" [formControl]="city" required value="{{address.city}}">
+            <mat-error *ngIf="city.invalid">{{getCityErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter pincode" [formControl]="pincode" required value="{{address.pincode}}">
+        </mat-form-field>
+        <div style="width:100%;">
+            <div style="width:50%;float:left;">
+                <button  class="btn btn-primary" mat-raised-button>Update Address</button>
+            </div>
+            <div style="width:50%;float:left;">
+                <button  class="btn btn-primary" (click)="goToLogin()" mat-raised-button>Proceed to payment</button></div>
+            </div>
+    </div>
+</form>
