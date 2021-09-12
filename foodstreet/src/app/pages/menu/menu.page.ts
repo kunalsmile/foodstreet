@@ -116,7 +116,7 @@ export class MenuPage implements OnInit {
     let itemCart: ShoppingCart;
     itemCart = {
       ShoppingCartKey: 0,
-      CustomerKey: 1,
+      CustomerKey: this.localStorageUtil.getUserId(),
       ItemKey: menuItem.ItemKey,
       Quantity: menuItem.Quantity,
       ItemName: menuItem.ItemName,

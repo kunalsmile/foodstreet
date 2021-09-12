@@ -35,7 +35,7 @@ export class CartModalPage implements OnInit {
     let customerKey = this.localStorageUtil.getUserId();
     this.orderService.placeOrder(customerKey).subscribe(o => {
       this.modalController.dismiss();
-      this.router.navigateByUrl('/login');
+      this.router.navigateByUrl('/order-confirmation');
     });
     
   }

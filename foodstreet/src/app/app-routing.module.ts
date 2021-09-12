@@ -40,7 +40,11 @@ const routes: Routes = [
   {
     path: 'cart-modal',
     loadChildren: () => import('./pages/cart-modal/cart-modal.module').then( m => m.CartModalPageModule)
+  },  {
+    path: 'order-confirmation',
+    loadChildren: () => import('./pages/order-confirmation/order-confirmation.module').then( m => m.OrderConfirmationPageModule)
   }
+
 
 
 

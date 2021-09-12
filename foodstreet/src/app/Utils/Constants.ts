@@ -11,4 +11,8 @@ export class Constants {
   public static USER_ID = "UserId";
   public static USER_NAME = "UserName";
 
+  //Status
+  public static ORDER_PLACED = "ORDER_PLACED";
+  public static ORDER_STARTED = "ORDER_STARTED";
+
 }

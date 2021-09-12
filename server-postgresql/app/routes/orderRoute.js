@@ -5,6 +5,11 @@ function customerRoutes(app) {
   .get(( req, res, next) => {
     next();
   }, orderController.placeOrder);
+
+  app.route("/order/getOrderByStatus") 
+  .get(( req, res, next) => {
+    next();
+  }, orderController.getOrderByStatus);
 }  
 
 module.exports = {
